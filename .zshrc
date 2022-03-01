@@ -45,6 +45,7 @@ envup() {
 }
 
 export PATH=$PATH:~/bin
+export EDITOR=nvim
 
 source $ZSH/oh-my-zsh.sh
 
