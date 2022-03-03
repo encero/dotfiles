@@ -144,6 +144,11 @@ nnoremap <leader>s :lua require'telescope.builtin'.lsp_document_symbols{}<cr>
 nnoremap <leader>S :lua require'telescope.builtin'.lsp_dynamic_workspace_symbols{}<cr>
 nnoremap <leader>g :lua require'telescope.builtin'.live_grep{}<cr>
 
+
+" utility
+nnoremap <leader>x :split term://zsh<cr>i
+nnoremap <leader>X :terminal<cr>i
+
 " hide autocomplete scratch window when completion is done
 autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -161,6 +166,7 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
+
 " use colorized go test
 if executable('gotest')
     let test#go#gotest#executable = 'gotest'
