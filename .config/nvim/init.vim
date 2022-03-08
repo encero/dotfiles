@@ -138,7 +138,8 @@ inoremap jk <esc>
 
 " Telescope mappings
 nnoremap <leader>f :Telescope find_files<cr>
-nnoremap <leader>F :Telescope file_browser<cr>
+" nnoremap <leader>F :Telescope file_browser<cr>
+nnoremap <leader>F :Telescope file_browser path=%:p:h<cr>
 nnoremap <leader>b :lua require'telescope.builtin'.buffers{}<cr>
 nnoremap <leader>s :lua require'telescope.builtin'.lsp_document_symbols{}<cr>
 nnoremap <leader>S :lua require'telescope.builtin'.lsp_dynamic_workspace_symbols{}<cr>
