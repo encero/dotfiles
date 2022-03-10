@@ -17,6 +17,8 @@ Plug 'dracula/vim',{'as':'dracula'} " dracula color scheme
 
 Plug 'sebdah/vim-delve'
 
+Plug 'jehuipark/github-co-author-vim-plugin'
+
 " COQ - completion plugin
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 " 9000+ Snippets fo COQ
