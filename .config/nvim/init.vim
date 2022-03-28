@@ -6,6 +6,9 @@ Plug 'nvim-telescope/telescope.nvim' " fuzy finder ( alternative for fzf, intera
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' } " C implementation of fzf algo for telescope
 Plug 'nvim-telescope/telescope-file-browser.nvim' " telescope file explorer, was builtin before, now as plugin
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " code parser and code query tool, provides smart synatx highlighting
 Plug 'nvim-treesitter/nvim-treesitter' " code parser and code query tool, provides smart synatx highlighting
@@ -205,6 +208,10 @@ set scrolloff=5
 " dont show preview buffer on omnifunc
 set completeopt-=preview
 
+augroup git
+    autocmd!
+    autocmd FileType gitcommit set spell
+augroup END
 
 function! s:DiffWithSaved()
   let filetype=&ft
